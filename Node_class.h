@@ -1,6 +1,6 @@
 #pragma once
 #include<iostream>
-class Noeud // class Noeud contenant les caracteristiques d'un Noeud
+class Noeud 
 {
 public:
 	Noeud(int element) {

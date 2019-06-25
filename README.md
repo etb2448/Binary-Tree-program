@@ -1,1 +1,1 @@
-# Bonary-Tree-program
+# Binary-Tree-program

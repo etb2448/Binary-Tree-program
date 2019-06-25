@@ -8,7 +8,7 @@ int main()
 	int Nombre;
 	cin >> Nombre;
 	Noeud* curr = NULL;
-	ArbreBinaire Arbre(Nombre); // call of binary tree 
+	ArbreBinaire Arbre(Nombre); // call of the binary tree class 
 	Arbre.ReceptionDeDonne(Nombre); // reception of data
 	int val = 0;
 	Arbre.inserer(val, curr); //insert from the first data you find in file

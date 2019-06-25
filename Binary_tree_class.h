@@ -2,20 +2,21 @@
 #include<iostream>
 #include "Node_class.h"
 using namespace std;
-class ArbreBinaire // class qui permet de construire l'arbre 
+class ArbreBinaire // Class that create the tree
 {
 public:
 
-	ArbreBinaire(int N) // ce constructeur prend trois tableaux  pour construire l'arbre puis initialise le nombre de noeud a la taille et initialise la racine a NULL
-	{
+	ArbreBinaire(int N) 
+	{	// This constructor take three array to create the tree and initialize the number of node at to the to N which is going to be the number 
+					//data in file and the root at NULL   
 		I = new int[N];
 		G = new int[N];
 		D = new int[N];
 		NombreDeNoeud = N;
 		racine = NULL;
 	}
-	void ReceptionDeDonne(int N) // fonction permettant de recevoir les donnees
-	{
+	void ReceptionDeDonne(int N) // function that helps to receive the data
+	{				
 		for (int i = 0; i < N; i++)
 		{
 			int indice;
@@ -30,8 +31,8 @@ public:
 		}
 	}
 
-	void inserer(int val, Noeud* a)// fonction recursive qui ajoute les noeuds à partir de l'entree (les trois tableau)
-	{
+	void inserer(int val, Noeud* a)
+	{			// recursive function that add the nodes from the entries
 		if (val == -1) { return; }
 		else
 		{
@@ -50,7 +51,7 @@ public:
 
 		}
 	}
-	void afficherPreOrdre(int val) // fonction permettant d'afficher les enfants de l'arbre en PreOrdre
+	void afficherPreOrdre(int val) // Print in PreOrdre
 	{
 		if (val == -1) { return; }
 		else
@@ -60,7 +61,7 @@ public:
 			afficherPreOrdre(D[val]);
 		}
 	}
-	void afficherSuffixe(int val) // fonction permettant d'afficher les enfants de l'arbre en Suffixe
+	void afficherSuffixe(int val) // Print in  Suffixe
 	{
 		if (G[val] == -1 && D[val] == -1)
 		{
@@ -84,7 +85,7 @@ public:
 			}
 		}
 	}
-	void Largeur() // affiche les enfants du pere aux enfants puis enfants des enfants de la gauche vers la droite 
+	void Largeur()
 	{
 		int* T = new int[NombreDeNoeud];
 		int i = 0;
@@ -123,7 +124,7 @@ public:
 			}
 		}
 	}
-	void ESTILBINAIRE() // Fonction pouvant verifier si un arbre est binaire ou non qui affiche true si c'est le cas ou False le contraire 
+	void ESTILBINAIRE() 
 	{
 		int* T = new int[NombreDeNoeud];
 		int i = 0;
